@@ -1,3 +1,7 @@
+html,body{
+    height: 100%;
+    background: #d4f6f3
+}
 body,h1,h2,h3,h4,h5,h5,p{
     padding: 0;
     margin: 0;
@@ -9,33 +13,69 @@ body,h1,h2,h3,h4,h5,h5,p{
     margin: 0 auto;
     padding: 0 20px;
     max-width: 800px;
-    text-align: center;
+    /* text-align: center; */
     
 }
 header{
     font-size: 2.5rem;
     margin-bottom: 15px;
+    text-align: center;
+}
+.accordion{
+    width: 500px;
+    margin: 0 auto;
+    color:rgb(105, 77, 248);
+}
+.accordion:hover{
+    color:#000;
+}
+.accordion:hover .close{
+    display:block;
+}
+.memes_header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid rgb(205, 205, 205);
+}
+.memes_header .close{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #000;
+}
+label{
+    cursor: pointer;
+}
+label:hover .image{
+    width: 300px;
+    height: auto;
 }
 
 .image{
-    width: 250px;
-    height: 0;
+    width: 0;
+    height: auto;
     overflow: hidden;
     background-color: #000;
-    transition: .3s ease;
+    transition: .3s linear;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 .accordion input{
     display: none;
 }
-label{
-    text-align: center;
+
+.text{
+    
 }
 .accordion input:checked + label{
-    color:aqua;
+    color:rgb(7, 8, 2);
 }
 .accordion input:checked + label .image{
-    height: 250px;
+    width: 300px;
+    height: auto;
+    background: cover;
+    transition: width .3s linear;
 }
 
 
