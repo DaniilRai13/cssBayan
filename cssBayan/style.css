@@ -119,3 +119,13 @@ label:hover .image {
         height: 0.6rem;
     }
 }
+
+@media (max-width:510px) {
+    header {
+        font-size: 1.6rem;
+    }
+
+    .text {
+        font-size: 0.65rem;
+    }
+}
