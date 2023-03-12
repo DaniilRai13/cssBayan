@@ -4,7 +4,6 @@ body {
     background: #4776E6;
     background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
     background: linear-gradient(to right, #8E54E9, #4776E6);
-
 }
 
 body,
@@ -23,7 +22,6 @@ p {
 }
 
 .container {
-
     margin: 0 auto;
     padding: 0 1.25rem;
     max-width: 1000px;
@@ -83,7 +81,6 @@ label {
     transition: .4s;
     margin: 0 auto;
     padding-bottom: 1.25rem;
-
 }
 
 label:hover .image {
