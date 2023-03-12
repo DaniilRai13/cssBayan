@@ -1,10 +1,10 @@
 html,
 body {
     height: 100%;
-    background: #4776E6; 
+    background: #4776E6;
     background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
     background: linear-gradient(to right, #8E54E9, #4776E6);
-    
+
 }
 
 body,
@@ -23,13 +23,15 @@ p {
 }
 
 .container {
+
     margin: 0 auto;
     padding: 0 1.25rem;
     max-width: 1000px;
 }
 
 header {
-    margin: 1.25rem  0 0.95rem 0;
+    margin: 0 0 1.25rem 0;
+    padding-top: 1.25rem;
     text-align: center;
     font-family: fantasy;
     font-size: 2.5rem;
@@ -39,7 +41,7 @@ header {
 }
 
 .accordion {
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     color: rgba(241, 150, 208, 0.656);
     transition: color .3s linear;
@@ -52,6 +54,7 @@ header {
 .memes_header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 0.625rem;
     border-top: 0.125rem solid rgba(148, 153, 244, 0.941);
 }
@@ -73,11 +76,6 @@ label {
     cursor: pointer;
 }
 
-label:hover .image {
-    width: 50%;
-    height: auto;
-}
-
 .image {
     width: 0%;
     height: 0%;
@@ -85,6 +83,13 @@ label:hover .image {
     transition: .4s;
     margin: 0 auto;
     padding-bottom: 1.25rem;
+
+}
+
+label:hover .image {
+    width: 50%;
+    height: auto;
+    margin-top: 0.6rem;
 }
 
 .accordion input {
@@ -96,8 +101,10 @@ label:hover .image {
 }
 
 .accordion input:checked+label .image {
+    margin-top: 0.6rem;
     width: 50%;
     height: auto;
     background: cover;
     transition: 1s linear;
 }
+
