@@ -1,82 +1,106 @@
-html,body{
+html,
+body {
     height: 100%;
     background: #d4f6f3
 }
-body,h1,h2,h3,h4,h5,h5,p{
-    padding: 0;
-    margin: 0;
-    font-weight: 700;
-    font-size: 22px;
+
+body {
 }
 
-.container{
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p {
+    padding: 0;
+    margin: 0;
+    font-weight:900;
+    font-size: 22px;
+    font-family: cursive;
+}
+
+.container {
     margin: 0 auto;
     padding: 0 20px;
-    max-width: 800px;
-    /* text-align: center; */
-    
+    max-width: 900px;
 }
-header{
-    font-size: 2.5rem;
+
+header {
     margin-bottom: 15px;
     text-align: center;
+    font-family: fantasy;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+
 }
-.accordion{
+
+.accordion {
     width: 500px;
     margin: 0 auto;
-    color:rgb(105, 77, 248);
+    color: rgb(105, 77, 248);
+    transition: color .3s linear;
 }
-.accordion:hover{
-    color:#000;
+
+.accordion:hover {
+    color: #000;
 }
-.accordion:hover .close{
-    display:block;
-}
-.memes_header{
+
+.memes_header {
     display: flex;
     justify-content: space-between;
     padding-top: 10px;
     border-top: 1px solid rgb(205, 205, 205);
 }
-.memes_header .close{
+
+.memes_header .close {
+    width: 15px;
+    height: 15px;
+    opacity:0;
+    transition: .2s;
+}
+.accordion:hover .close {
+    transform: rotate(90deg);
+
+    opacity: 1;
+}
+label {
     display: block;
-    width: 30px;
-    height: 30px;
-    background: #000;
-}
-label{
+    /* margin-bottom: -10px; */
     cursor: pointer;
+    /* overflow: hidden; */
 }
-label:hover .image{
+
+label:hover .image {
     width: 300px;
     height: auto;
 }
 
-.image{
-    width: 0;
-    height: auto;
-    overflow: hidden;
-    background-color: #000;
-    transition: .3s linear;
+.image {
+    width: 0%;
+    height: 0%;
+    display: block;
+    transition: .4s;
     margin: 0 auto;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
-.accordion input{
+
+.accordion input {
     display: none;
 }
 
-.text{
-    
+.text {}
+
+.accordion input:checked+label {
+    color: rgb(7, 8, 2);
 }
-.accordion input:checked + label{
-    color:rgb(7, 8, 2);
-}
-.accordion input:checked + label .image{
+
+.accordion input:checked+label .image {
     width: 300px;
     height: auto;
     background: cover;
-    transition: width .3s linear;
+    transition: 1s linear;
 }
-
-
-
