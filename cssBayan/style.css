@@ -1,10 +1,10 @@
 html,
 body {
     height: 100%;
-    background: #d4f6f3
-}
-
-body {
+    background: #4776E6; 
+    background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+    background: linear-gradient(to right, #8E54E9, #4776E6);
+    
 }
 
 body,
@@ -17,31 +17,31 @@ h5,
 p {
     padding: 0;
     margin: 0;
-    font-weight:900;
-    font-size: 22px;
+    font-weight: 900;
+    font-size: 1.4rem;
     font-family: cursive;
 }
 
 .container {
     margin: 0 auto;
-    padding: 0 20px;
-    max-width: 900px;
+    padding: 0 1.25rem;
+    max-width: 1000px;
 }
 
 header {
-    margin-bottom: 15px;
+    margin: 1.25rem  0 0.95rem 0;
     text-align: center;
     font-family: fantasy;
     font-size: 2.5rem;
     font-weight: 700;
-    letter-spacing: 4px;
-
+    letter-spacing: 0.25rem;
+    color: #282828d3;
 }
 
 .accordion {
-    width: 500px;
+    width: 50%;
     margin: 0 auto;
-    color: rgb(105, 77, 248);
+    color: rgba(241, 150, 208, 0.656);
     transition: color .3s linear;
 }
 
@@ -52,30 +52,29 @@ header {
 .memes_header {
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
-    border-top: 1px solid rgb(205, 205, 205);
+    padding-top: 0.625rem;
+    border-top: 0.125rem solid rgba(148, 153, 244, 0.941);
 }
 
 .memes_header .close {
-    width: 15px;
-    height: 15px;
-    opacity:0;
+    width: 0.94rem;
+    height: 0.94rem;
+    opacity: 0;
     transition: .2s;
 }
+
 .accordion:hover .close {
     transform: rotate(90deg);
-
     opacity: 1;
 }
+
 label {
     display: block;
-    /* margin-bottom: -10px; */
     cursor: pointer;
-    /* overflow: hidden; */
 }
 
 label:hover .image {
-    width: 300px;
+    width: 50%;
     height: auto;
 }
 
@@ -85,21 +84,19 @@ label:hover .image {
     display: block;
     transition: .4s;
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
 }
 
 .accordion input {
     display: none;
 }
 
-.text {}
-
 .accordion input:checked+label {
     color: rgb(7, 8, 2);
 }
 
 .accordion input:checked+label .image {
-    width: 300px;
+    width: 50%;
     height: auto;
     background: cover;
     transition: 1s linear;
