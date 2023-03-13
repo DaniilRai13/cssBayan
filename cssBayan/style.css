@@ -24,7 +24,7 @@ p {
 .container {
     margin: 0 auto;
     padding: 0 1.25rem;
-    max-width: 1000px;
+    max-width: 100vh;
 }
 
 header {
@@ -45,10 +45,6 @@ header {
     transition: color .3s linear;
 }
 
-.accordion:hover {
-    color: #000;
-}
-
 .memes_header {
     display: flex;
     justify-content: space-between;
@@ -62,11 +58,6 @@ header {
     height: 0.94rem;
     opacity: 0;
     transition: .2s;
-}
-
-.accordion:hover .close {
-    transform: rotate(90deg);
-    opacity: 1;
 }
 
 label {
@@ -83,12 +74,6 @@ label {
     padding-bottom: 1.25rem;
 }
 
-label:hover .image {
-    width: 50%;
-    height: auto;
-    margin-top: 0.6rem;
-}
-
 .accordion input {
     display: none;
 }
@@ -103,6 +88,23 @@ label:hover .image {
     height: auto;
     background: cover;
     transition: 1s linear;
+}
+
+@meida (min-width:1200px) {
+    .accordion:hover {
+        color: #000;
+    }
+
+    .accordion:hover .close {
+        transform: rotate(90deg);
+        opacity: 1;
+    }
+
+    label:hover .image {
+        width: 50%;
+        height: auto;
+        margin-top: 0.6rem;
+    }
 }
 
 @media (max-width:800px) {
