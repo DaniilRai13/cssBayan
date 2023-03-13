@@ -90,7 +90,7 @@ label {
     transition: 1s linear;
 }
 
-@meida (min-width:1200px) {
+@media (min-width:1200px) {
     .accordion:hover {
         color: #000;
     }
