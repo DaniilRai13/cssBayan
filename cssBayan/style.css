@@ -41,7 +41,6 @@ header {
 .accordion {
     width: 60%;
     margin: 0 auto;
-    color: rgba(241, 150, 208, 0.656);
     transition: color .3s linear;
 }
 
@@ -53,9 +52,9 @@ header {
     border-top: 0.125rem solid rgba(148, 153, 244, 0.941);
 }
 
-.memes_header .close {
-    width: 0.94rem;
-    height: 0.94rem;
+.memes_header svg {
+    width: 0.9rem;
+    height: 0.9rem;
     opacity: 0;
     transition: .2s;
 }
@@ -63,6 +62,11 @@ header {
 label {
     display: block;
     cursor: pointer;
+}
+
+.text {
+    color: rgba(241, 150, 208, 0.656);
+    transition: .2s linear;
 }
 
 .image {
@@ -78,8 +82,10 @@ label {
     display: none;
 }
 
-.accordion input:checked+label {
+.accordion input:checked+label .text,
+.accordion input:checked+label svg {
     color: rgb(7, 8, 2);
+    fill: #000;
 }
 
 .accordion input:checked+label .image {
@@ -87,15 +93,25 @@ label {
     width: 50%;
     height: auto;
     background: cover;
-    transition: 1s linear;
+    transition: .8s linear;
+}
+
+.accordion input:active+label .image {
+    opacity: 0.7;
+}
+
+.accordion input:active+label .text,
+.accordion input:active+label svg {
+    color: rgba(241, 150, 208, 0.656);
+    fill: rgba(241, 150, 208, 0.656);
 }
 
 @media (min-width:1200px) {
-    .accordion:hover {
+    .accordion:hover .text {
         color: #000;
     }
 
-    .accordion:hover .close {
+    .accordion:hover svg {
         transform: rotate(90deg);
         opacity: 1;
     }
@@ -107,11 +123,15 @@ label {
     }
 }
 
-@media (max-width:800px) {
+@media (max-width:900px) {
     header {
         font-size: 2rem;
     }
-
+    .memes_header svg {
+        fill: rgba(241, 150, 208, 0.656);
+        transform: rotate(90deg);
+        opacity: 1;
+    }
     .text {
         font-size: 0.9rem;
     }
