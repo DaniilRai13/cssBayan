@@ -1,0 +1,156 @@
+html,
+body {
+    height: 100%;
+    background: #4776E6;
+    background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+    background: linear-gradient(to right, #8E54E9, #4776E6);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p {
+    padding: 0;
+    margin: 0;
+    font-weight: 900;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    max-width: 100vh;
+}
+
+header {
+    margin: 0 0 1.25rem 0;
+    padding-top: 1.25rem;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+    color: #282828d3;
+}
+
+.accordion {
+    width: 60%;
+    margin: 0 auto;
+    transition: color .3s linear;
+}
+
+.memes_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.625rem;
+    border-top: 0.125rem solid rgba(148, 153, 244, 0.941);
+}
+
+.memes_header svg {
+    width: 0.9rem;
+    height: 0.9rem;
+    opacity: 0;
+    transition: .2s;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+}
+
+.text {
+    color: rgba(241, 150, 208, 0.656);
+    transition: .2s linear;
+}
+
+.image {
+    width: 0%;
+    height: 0%;
+    display: block;
+    transition: .4s;
+    margin: 0 auto;
+    padding-bottom: 1.25rem;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion input:checked+label .text,
+.accordion input:checked+label svg {
+    color: rgb(7, 8, 2);
+    fill: #000;
+}
+
+.accordion input:checked+label .image {
+    margin-top: 0.6rem;
+    width: 50%;
+    height: auto;
+    background: cover;
+    transition: .8s linear;
+}
+
+.accordion input:active+label .image {
+    opacity: 0.7;
+}
+
+.accordion input:active+label .text,
+.accordion input:active+label svg {
+    color: rgba(241, 150, 208, 0.656);
+    fill: rgba(241, 150, 208, 0.656);
+}
+
+@media (min-width:1200px) {
+    .accordion:hover .text {
+        color: #000;
+    }
+
+    .accordion:hover svg {
+        transform: rotate(90deg);
+        opacity: 1;
+    }
+
+    label:hover .image {
+        width: 50%;
+        height: auto;
+        margin-top: 0.6rem;
+    }
+}
+
+@media (max-width:900px) {
+    header {
+        font-size: 2rem;
+    }
+    .memes_header svg {
+        fill: rgba(241, 150, 208, 0.656);
+        transform: rotate(90deg);
+        opacity: 1;
+    }
+    .text {
+        font-size: 0.9rem;
+    }
+
+    .memes_header .close {
+        width: 0.6rem;
+        height: 0.6rem;
+    }
+}
+
+@media (max-width:510px) {
+    header {
+        font-size: 1.6rem;
+    }
+    .memes_header svg{
+        width: 0.6rem;
+        height: 0.6rem;
+    }
+    .text {
+        font-size: 0.65rem;
+    }
+}
